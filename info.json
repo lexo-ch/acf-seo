@@ -14,7 +14,7 @@
         "changelog": "Click <a href='https://github.com/lexo-ch/acf-seo/releases/latest/' target='_blank'>here</a> to see changelog."
     },
     "banners": {
-        "low": "https://raw.githubusercontent.com/lexo-ch/acf-seo/master/banners/banner-1544x500.webp",
+        "low": "https://raw.githubusercontent.com/lexo-ch/acf-seo/master/banners/banner-772x250",
         "high": "https://raw.githubusercontent.com/lexo-ch/acf-seo/master/banners/banner-1544x500.webp"
     }
 }
