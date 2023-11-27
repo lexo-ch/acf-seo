@@ -1,0 +1,30 @@
+{
+    "name": "lexo/acf-seo",
+    "description": "SEO addon based on ACF.",
+    "version": "1.0.0",
+    "homepage": "https://www.lexo.ch/",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "LEXO GmbH",
+            "email": "websupport@lexo.ch"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LEXO\\AcfSeo\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "npm install",
+            "npx mix build"
+        ]
+    }
+}
