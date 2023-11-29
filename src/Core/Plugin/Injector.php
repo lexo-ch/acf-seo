@@ -62,7 +62,7 @@ class Injector extends Singleton
             <meta name="twitter:title" content="<?php echo $seo_title; ?>">
             <meta name="twitter:description" content="<?php echo $seo_description; ?>">
 
-            <?php if (!empty($seo_image_field)) { ?>
+            <?php if (!empty($seo_image_field) && isset($seo_image_field['sizes']) && isset($seo_image_field['sizes']['large'])) { ?>
                 <meta property="og:image" content="<?php echo $seo_image_field['sizes']['large']; ?>">
                 <meta name="twitter:image" content="<?php echo $seo_image_field['sizes']['large']; ?>">
             <?php } ?>
