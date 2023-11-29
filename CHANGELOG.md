@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/lexo-ch/acf-seo/compare/v1.0.1...v1.0.2) (2023-11-29)
+
+
+### Bug Fixes
+
+* **core:** Downgrade code for PHP 7.4 ([b3f2ba3](https://github.com/lexo-ch/acf-seo/commit/b3f2ba3253df956536deabd50065c603114ad7fa))
+
 ## [1.0.1](https://github.com/lexo-ch/acf-seo/compare/v1.0.0...v1.0.1) (2023-11-29)
 
 
