@@ -188,4 +188,23 @@ class PluginService extends Singleton
             'normal'
         );
     }
+
+    public function setToolbars()
+    {
+        add_filter('acf/fields/wysiwyg/toolbars', [$this, 'filterToolbars']);
+    }
+
+    public function filterToolbars($toolbars)
+    {
+        $toolbars['acf_seo_h1_editor'] = [];
+        $toolbars['acf_seo_h1_editor'][1] = [
+            'styleselect',
+            'undo',
+            'redo',
+            'pastetext',
+            'removeformat'
+        ];
+
+        return $toolbars;
+    }
 }

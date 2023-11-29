@@ -41,6 +41,7 @@ class Bootloader extends Singleton
         $plugin_settings->addUpdateCheckLink();
         $plugin_settings->noUpdatesNotice();
         $plugin_settings->updateSuccessNotice();
+        $plugin_settings->setToolbars();
 
         Fields::getInstance()->run();
 

@@ -44,6 +44,11 @@ For durther changes use ACF logic for `location` of the groups.
 
 Default `$show_h2` value is `true`.
 
+#### - `acfseo/heading-1-type`
+*Parameters*
+`apply_filters('acfseo/heading-1-type', $h1_type);`
+- $h1_type (string) Accepted values are `editor` and `text`. It will always fallback to `text`, which is default value.
+
 ---
 ## Actions
 #### - `acfseo/init`
