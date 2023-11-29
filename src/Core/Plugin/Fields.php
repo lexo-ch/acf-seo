@@ -59,48 +59,53 @@ class Fields extends Singleton
 
         $heading_1_type = apply_filters(DOMAIN . '/heading-1-type', $heading_1_type);
 
-        $fields[] = match ($heading_1_type) {
-            'editor' => [
-                'key' => 'field_654ce426d9809',
-                'label' => __('Page heading 1', 'acfseo'),
-                'name' => 'seo_h1_title',
-                'aria-label' => '',
-                'type' => 'wysiwyg',
-                'instructions' => __('Put the page title here. If this field is left blank, the respective page will have no title!', 'acfseo'),
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => [
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ],
-                'default_value' => '',
-                'tabs' => 'all',
-                'toolbar' => 'acf_seo_h1_editor',
-                'media_upload' => 0,
-                'delay' => 0,
-            ],
-            default => [
-                'key' => 'field_654ce426d9809',
-                'label' => __('Page heading 1', 'acfseo'),
-                'name' => 'seo_h1_title',
-                'aria-label' => '',
-                'type' => 'text',
-                'instructions' => __('Put the page title here. If this field is left blank, the respective page will have no title!', 'acfseo'),
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => [
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ],
-                'default_value' => '',
-                'maxlength' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-            ]
-        };
+        switch ($heading_1_type) {
+            case 'editor':
+                $fields[] = [
+                    'key' => 'field_654ce426d9809',
+                    'label' => __('Page heading 1', 'acfseo'),
+                    'name' => 'seo_h1_title',
+                    'aria-label' => '',
+                    'type' => 'wysiwyg',
+                    'instructions' => __('Put the page title here. If this field is left blank, the respective page will have no title!', 'acfseo'),
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'tabs' => 'all',
+                    'toolbar' => 'acf_seo_h1_editor',
+                    'media_upload' => 0,
+                    'delay' => 0,
+                ];
+                break;
+
+            default:
+                $fields[] = [
+                    'key' => 'field_654ce426d9809',
+                    'label' => __('Page heading 1', 'acfseo'),
+                    'name' => 'seo_h1_title',
+                    'aria-label' => '',
+                    'type' => 'text',
+                    'instructions' => __('Put the page title here. If this field is left blank, the respective page will have no title!', 'acfseo'),
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'default_value' => '',
+                    'maxlength' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                ];
+                break;
+        }
 
         $show_heading_2 = true;
 
