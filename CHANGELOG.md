@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/lexo-ch/acf-seo/compare/v1.0.0...v1.0.1) (2023-11-29)
+
+
+### Bug Fixes
+
+* **core:** Add support for WYSIWYG for h1 ([1657310](https://github.com/lexo-ch/acf-seo/commit/16573106cf72e340091a5191e7796f808a337cd1))
+* **core:** Fix issues with undefined image sizes ([37c5ce9](https://github.com/lexo-ch/acf-seo/commit/37c5ce91dee901565cc18a6b7c2a542b025b5549))
+
 # 1.0.0 (2023-11-27)
 
 

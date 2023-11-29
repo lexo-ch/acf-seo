@@ -1,7 +1,7 @@
 {
     "name": "lexo/acf-seo",
     "description": "SEO addon based on ACF.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://www.lexo.ch/",
     "license": "GPL-2.0-only",
     "authors": [
