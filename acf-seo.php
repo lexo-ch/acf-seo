@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       ACF SEO
+ * Plugin Name:       LEXO ACF SEO
  * Plugin URI:        https://github.com/lexo-ch/acf-seo/
  * Description:       SEO addon based on ACF.
  * Version:           1.0.2
@@ -95,7 +95,7 @@ use LEXO\AcfSeo\Core\Bootloader;
     && define('LEXO\AcfSeo\UPDATE_PATH', 'https://wprepo.lexo.ch/public/acf-seo/info.json');
 
 if (!file_exists($composer = PATH . '/vendor/autoload.php')) {
-    wp_die('Error locating autoloader in ACF SEO.
+    wp_die('Error locating autoloader in LEXO ACF SEO.
         Please run a following command:<pre>composer install</pre>', 'acfseo');
 }
 
@@ -122,7 +122,7 @@ add_action('plugins_loaded', function () {
 
     if (!is_plugin_active('advanced-custom-fields-pro/acf.php')) {
         wp_admin_notice(
-            __('ACF PRO is required in order to use ACF SEO plugin. Please activate ACF PRO plugin.', 'acfseo'),
+            __('ACF PRO is required in order to use LEXO ACF SEO plugin. Please activate ACF PRO plugin.', 'acfseo'),
             [
                 'type'                  => 'error',
                 'dismissible'           => false,

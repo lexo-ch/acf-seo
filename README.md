@@ -1,4 +1,4 @@
-# ACF SEO
+# LEXO ACF SEO
 SEO addon based on ACF.
 
 ---
@@ -14,14 +14,14 @@ Release tags are created with Semantic versioning in mind. Commit messages were 
 ## Installation
 1. Go to the [latest release](https://github.com/lexo-ch/acf-seo/releases/latest/).
 2. Under Assets, click on the link named `Version x.y.z`. It's a compiled build.
-3. Extract zip file and copy the folder into your `wp-content/plugins` folder and activate ACF SEO in plugins admin page. Alternatively, you can use downloaded zip file to install it directly from your plugin admin page.
+3. Extract zip file and copy the folder into your `wp-content/plugins` folder and activate LEXO ACF SEO in plugins admin page. Alternatively, you can use downloaded zip file to install it directly from your plugin admin page.
 
 ---
 ## Filters
 #### - `acfseo/location`
 *Parameters*
 `apply_filters('acfseo/location', $location);`
-- $location (array) Change the locations where ACF SEO fields should be shown. By default it's shwon only on `page` post type.
+- $location (array) Change the locations where LEXO ACF SEO fields should be shown. By default it's shwon only on `page` post type.
 
 Default `$location` array definition is:
 ```php
@@ -52,7 +52,7 @@ Default `$show_h2` value is `true`.
 ---
 ## Actions
 #### - `acfseo/init`
-- Fires on ACF SEO init.
+- Fires on LEXO ACF SEO init.
 
 ---
 ## Changelog

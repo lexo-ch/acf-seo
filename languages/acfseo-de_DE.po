@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ACF SEO\n"
+"Project-Id-Version: LEXO ACF SEO\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-27 15:03+0000\n"
 "PO-Revision-Date: 2023-11-27 15:44+0000\n"
@@ -17,15 +17,15 @@ msgstr ""
 
 #: ../../../../../../../Documents/GitHub/acf-seo/acf-seo.php:125
 msgid ""
-"ACF PRO is required in order to use ACF SEO plugin. Please activate ACF PRO "
+"ACF PRO is required in order to use LEXO ACF SEO plugin. Please activate ACF PRO "
 "plugin."
 msgstr ""
-"ACF PRO ist erforderlich, um das ACF SEO-Plugin verwenden zu können. Bitte "
+"ACF PRO ist erforderlich, um das LEXO ACF SEO-Plugin verwenden zu können. Bitte "
 "aktivieren Sie das ACF PRO-Plugin."
 
 #. Name of the plugin
-msgid "ACF SEO"
-msgstr "ACF SEO"
+msgid "LEXO ACF SEO"
+msgstr "LEXO ACF SEO"
 
 #: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:330
 msgid "Activate"

@@ -1,4 +1,4 @@
-=== ACF SEO ===
+=== LEXO ACF SEO ===
 Contributors: mpuzovic
 Donate link: https://www.lexo.ch
 Tags: plugin, acf, seo
