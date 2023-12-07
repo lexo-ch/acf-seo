@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/lexo-ch/acf-seo/compare/v1.0.2...v1.0.3) (2023-12-07)
+
+
+### Bug Fixes
+
+* **core:** Bump "tested up to" versions ([60fc51a](https://github.com/lexo-ch/acf-seo/commit/60fc51a13b735ead924cd604ca2bdd5519e3feb5))
+* **core:** Change of the plugin name ([d857092](https://github.com/lexo-ch/acf-seo/commit/d85709230b2e09982735bc76f61cb267390ba5d4))
+* **deps:** Update dependencies ([3834664](https://github.com/lexo-ch/acf-seo/commit/383466427434812b8ec2f2bf307ff9d8faf045f6))
+
 ## [1.0.2](https://github.com/lexo-ch/acf-seo/compare/v1.0.1...v1.0.2) (2023-11-29)
 
 
