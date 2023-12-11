@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:149
 msgid ""
-"Maximum character length: 250<br><br>This description is displayed in the "
+"Maximum character length: 160<br><br>This description is displayed in the "
 "search engine under the title. The description must be clear and should be "
 "as short as possible so that potential users know immediately what this "
 "article is about. The description should also contain all relevant keywords "
@@ -121,7 +121,7 @@ msgstr ""
 
 #: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:129
 msgid ""
-"Maximum character length: 95 <br><br>If this field remains empty, the system "
+"Maximum character length: 60 <br><br>If this field remains empty, the system "
 "uses the title of the post. You can enter a specific title here, which will "
 "appear in the search engine as the title for this post. Choose a title that "
 "describes the article as best as possible and includes all focus keywords. "
