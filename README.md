@@ -49,6 +49,16 @@ Default `$show_h2` value is `true`.
 `apply_filters('acfseo/heading-1-type', $h1_type);`
 - $h1_type (string) Accepted values are `editor` and `text`. It will always fallback to `text`, which is default value.
 
+#### - `acfseo/admin/localized-script`
+*Parameters*
+`apply_filters('acfseo/admin/localized-script', $args);`
+- $args (array) The array which will be used for localizing `acfseoAdminLocalized` variable in the admin.
+
+#### - `acfseo/enqueue/admin-acfseo.js`
+*Parameters*
+`apply_filters('acfseo/enqueue/admin-acfseo.js', $args);`
+- $args (bool) Printing of the file `admin-acfseo.js` (script id is `acfseo/admin-acfif.js-js`). It also affects printing of the localized `acfseoAdminLocalized` variable.
+
 ---
 ## Actions
 #### - `acfseo/init`
