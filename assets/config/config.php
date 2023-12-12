@@ -20,7 +20,7 @@ return [
         ],
         'admin' => [
             'styles'    => [],
-            'scripts'   => []
+            'scripts'   => ['js/admin-acfseo.js']
         ],
         'editor' => [
             'styles'    => []

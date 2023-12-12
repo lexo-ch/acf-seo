@@ -11,6 +11,7 @@ mix
   });
 
 mix
+  .js('resources/scripts/admin-acfseo.js', 'js')
   .options({
     processCssUrls: false,
   });

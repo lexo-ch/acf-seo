@@ -12,6 +12,11 @@ class Fields extends Singleton
 {
     protected static $instance = null;
 
+    private int $seo_title_recommended_length = 60;
+    private int $seo_title_maxlength = 120;
+    private int $description_recommended_length = 160;
+    private int $description_maxlength = 250;
+
     public function run()
     {
         $this->importFields();
@@ -154,11 +159,15 @@ class Fields extends Singleton
             ],
             [
                 'key' => 'field_654ce477d980c',
-                'label' => __('Search engine heading', 'acfseo'),
+                'label' => __('Search Engine Title', 'acfseo'),
                 'name' => 'seo_title',
                 'aria-label' => '',
                 'type' => 'text',
-                'instructions' => __('Maximum character length: 60 <br><br>If this field remains empty, the system uses the title of the post. You can enter a specific title here, which will appear in the search engine as the title for this post. Choose a title that describes the article as best as possible and includes all focus keywords. The title should be easy to understand so that visitors in the search engine see this text first/directly.', 'acfseo'),
+                'instructions' => sprintf(
+                    __('Recommended Length: %s characters or less<br>Maximum Length: %s characters<br><br>If this field is left blank, the post\'s title will be used automatically. It\'s important to create a title that not only succinctly summarizes your article but also includes your key keywords. Strive for clarity and appeal, as this title is the first thing people will see in search engine results. Adhering to these recommendations can significantly enhance your post\'s visibility and attractiveness in search results.', 'acfseo'),
+                    $this->seo_title_recommended_length,
+                    $this->seo_title_maxlength
+                ),
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => [
@@ -167,18 +176,22 @@ class Fields extends Singleton
                     'id' => '',
                 ],
                 'default_value' => '',
-                'maxlength' => 60,
+                'maxlength' => $this->seo_title_maxlength,
                 'placeholder' => '',
                 'prepend' => '',
                 'append' => '',
             ],
             [
                 'key' => 'field_654ce49bd980d',
-                'label' => __('Search engine description', 'acfseo'),
+                'label' => __('Search Engine Description', 'acfseo'),
                 'name' => 'seo_description',
                 'aria-label' => '',
                 'type' => 'textarea',
-                'instructions' => __('Maximum character length: 160<br><br>This description is displayed in the search engine under the title. The description must be clear and should be as short as possible so that potential users know immediately what this article is about. The description should also contain all relevant keywords for the article.', 'acfseo'),
+                'instructions' => sprintf(
+                    __('Recommended Length: %s characters or less<br>Maximum Length: %s characters<br><br>The description appearing beneath the title in search engine results plays a crucial role in conveying the essence of the article. It should be concise yet comprehensive, promptly informing potential readers about the content\'s focus. Additionally, it\'s essential to integrate all relevant keywords seamlessly to enhance search relevance and visibility.', 'acfseo'),
+                    $this->description_recommended_length,
+                    $this->description_maxlength
+                ),
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => [
@@ -187,7 +200,7 @@ class Fields extends Singleton
                     'id' => '',
                 ],
                 'default_value' => '',
-                'maxlength' => 160,
+                'maxlength' => $this->description_maxlength,
                 'rows' => '',
                 'placeholder' => '',
                 'new_lines' => '',

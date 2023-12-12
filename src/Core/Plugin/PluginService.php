@@ -40,6 +40,9 @@ class PluginService extends Singleton
         $loader->registerNamespace(self::$namespace, $config);
 
         add_action('admin_post_' . self::CHECK_UPDATE, [$this, 'checkForUpdateManually']);
+
+        add_action('acf/render_field/type=text', [$this, 'renderCounter'], 20, 1);
+        add_action('acf/render_field/type=textarea', [$this, 'renderCounter'], 20, 1);
     }
 
     public function addAdminLocalizedScripts()
@@ -175,7 +178,7 @@ class PluginService extends Singleton
         );
     }
 
-    public function removeOldSeoMetaBox()
+    public function removeOldSeoMetaBox(): void
     {
         remove_meta_box(
             'seo_metabox_container',
@@ -189,12 +192,12 @@ class PluginService extends Singleton
         );
     }
 
-    public function setToolbars()
+    public function setToolbars(): void
     {
         add_filter('acf/fields/wysiwyg/toolbars', [$this, 'filterToolbars']);
     }
 
-    public function filterToolbars($toolbars)
+    public function filterToolbars($toolbars): array
     {
         $toolbars['acf_seo_h1_editor'] = [];
         $toolbars['acf_seo_h1_editor'][1] = [
@@ -206,5 +209,56 @@ class PluginService extends Singleton
         ];
 
         return $toolbars;
+    }
+
+    public function renderCounter($field): array
+    {
+        if (
+            !$this->shouldRun() ||
+            !$field['maxlength'] ||
+            ($field['type'] != 'text' && $field['type'] != 'textarea')
+        ) {
+            return $field;
+        }
+
+        $len = function_exists('mb_strlen')
+            ? mb_strlen($field['value'])
+            : strlen($field['value']);
+
+        $max = $field['maxlength'];
+
+        echo $this->counterContent($len, $max);
+
+        return $field;
+    }
+
+    private function counterContent(int $len, int $max): string
+    {
+        $classes = [
+            'char-count-wrapper'
+        ];
+
+        $attrs = [
+            'class' => implode(', ', $classes)
+        ];
+
+        ob_start(); ?>
+            <span <?php echo acf_esc_attrs($attrs); ?>>
+                <span class="char-count"><?php echo $len; ?></span>
+                <span class="char-separator">/</span>
+                <span class="char-max"><?php echo $max; ?></span>
+            </span>
+        <?php return ob_get_clean();
+    }
+
+    private function shouldRun(): bool
+    {
+        global $post;
+
+        if ($post && $post->ID && get_post_type($post->ID) == 'acf-field-group') {
+            return false;
+        }
+
+        return true;
     }
 }
