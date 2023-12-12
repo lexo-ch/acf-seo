@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/lexo-ch/acf-seo/compare/v1.0.3...v1.1.0) (2023-12-12)
+
+
+### Bug Fixes
+
+* **core:** Change number of chars on title and description ([eb9b88e](https://github.com/lexo-ch/acf-seo/commit/eb9b88e149ba7078c2b9fcb30ac6b32a93983e2f))
+
+
+### Features
+
+* **core:** Add char counter on fields with maxlength defined ([61f6243](https://github.com/lexo-ch/acf-seo/commit/61f6243141d709b04f0a41fc5a3f1b8839bf5ea3))
+
 ## [1.0.3](https://github.com/lexo-ch/acf-seo/compare/v1.0.2...v1.0.3) (2023-12-07)
 
 
