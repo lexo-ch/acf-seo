@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/lexo-ch/acf-seo/compare/v1.1.0...v1.1.1) (2023-12-12)
+
+
+### Bug Fixes
+
+* **core:** Fix localized scripts filename ([8204d5a](https://github.com/lexo-ch/acf-seo/commit/8204d5a85e2c84d6634d60f2be1018ffa3975881))
+* **docs:** Add new filters ([1d608c9](https://github.com/lexo-ch/acf-seo/commit/1d608c9c9488a79c9b3131fa1b1f33b181a025be))
+
 # [1.1.0](https://github.com/lexo-ch/acf-seo/compare/v1.0.3...v1.1.0) (2023-12-12)
 
 
