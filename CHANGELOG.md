@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/lexo-ch/acf-seo/compare/v1.1.1...v1.1.2) (2023-12-12)
+
+
+### Bug Fixes
+
+* **core:** Add filters for maxlength for Seo Title and Description ([9283a80](https://github.com/lexo-ch/acf-seo/commit/9283a80bef2a0026b614e97baa7869fc2c89a1d9))
+
 ## [1.1.1](https://github.com/lexo-ch/acf-seo/compare/v1.1.0...v1.1.1) (2023-12-12)
 
 
