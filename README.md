@@ -59,6 +59,16 @@ Default `$show_h2` value is `true`.
 `apply_filters('acfseo/enqueue/admin-acfseo.js', $args);`
 - $args (bool) Printing of the file `admin-acfseo.js` (script id is `acfseo/admin-acfif.js-js`). It also affects printing of the localized `acfseoAdminLocalized` variable.
 
+#### - `acfseo/seo-title/maxlength`
+*Parameters*
+`apply_filters('acfseo/seo-title/maxlength', $maxlength);`
+- $maxlength (int) Increases the `maxlength` for Seo Title field.
+
+#### - `acfseo/description/maxlength`
+*Parameters*
+`apply_filters('acfseo/description/maxlength', $maxlength);`
+- $maxlength (int) Increases the `maxlength` for Description field.
+
 ---
 ## Actions
 #### - `acfseo/init`

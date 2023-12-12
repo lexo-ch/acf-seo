@@ -12,11 +12,6 @@ class Fields extends Singleton
 {
     protected static $instance = null;
 
-    private int $seo_title_recommended_length = 60;
-    private int $seo_title_maxlength = 120;
-    private int $description_recommended_length = 160;
-    private int $description_maxlength = 250;
-
     public function run()
     {
         $this->importFields();
@@ -37,8 +32,18 @@ class Fields extends Singleton
                 ]
             ]
         ];
+        $heading_1_type                 = 'text';
+        $show_heading_2                 = true;
+        $seo_title_recommended_length   = 60;
+        $description_recommended_length = 160;
+        $seo_title_maxlength            = 120;
+        $description_maxlength          = 250;
 
-        $location = apply_filters(DOMAIN . '/location', $location);
+        $location               = apply_filters(DOMAIN . '/location', $location);
+        $heading_1_type         = apply_filters(DOMAIN . '/heading-1-type', $heading_1_type);
+        $show_heading_2         = apply_filters(DOMAIN . '/show-heading-2', $show_heading_2);
+        $seo_title_maxlength    = apply_filters(DOMAIN . '/seo-title/maxlength', $seo_title_maxlength);
+        $description_maxlength  = apply_filters(DOMAIN . '/description/maxlength', $description_maxlength);
 
         $fields = [
             [
@@ -59,10 +64,6 @@ class Fields extends Singleton
                 'endpoint' => 0,
             ]
         ];
-
-        $heading_1_type = 'text';
-
-        $heading_1_type = apply_filters(DOMAIN . '/heading-1-type', $heading_1_type);
 
         switch ($heading_1_type) {
             case 'editor':
@@ -111,10 +112,6 @@ class Fields extends Singleton
                 ];
                 break;
         }
-
-        $show_heading_2 = true;
-
-        $show_heading_2 = apply_filters(DOMAIN . '/show-heading-2', $show_heading_2);
 
         if ($show_heading_2) {
             $fields[] = [
@@ -165,8 +162,8 @@ class Fields extends Singleton
                 'type' => 'text',
                 'instructions' => sprintf(
                     __('Recommended Length: %s characters or less<br>Maximum Length: %s characters<br><br>If this field is left blank, the post\'s title will be used automatically. It\'s important to create a title that not only succinctly summarizes your article but also includes your key keywords. Strive for clarity and appeal, as this title is the first thing people will see in search engine results. Adhering to these recommendations can significantly enhance your post\'s visibility and attractiveness in search results.', 'acfseo'),
-                    $this->seo_title_recommended_length,
-                    $this->seo_title_maxlength
+                    $seo_title_recommended_length,
+                    $seo_title_maxlength
                 ),
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -176,7 +173,7 @@ class Fields extends Singleton
                     'id' => '',
                 ],
                 'default_value' => '',
-                'maxlength' => $this->seo_title_maxlength,
+                'maxlength' => $seo_title_maxlength,
                 'placeholder' => '',
                 'prepend' => '',
                 'append' => '',
@@ -189,8 +186,8 @@ class Fields extends Singleton
                 'type' => 'textarea',
                 'instructions' => sprintf(
                     __('Recommended Length: %s characters or less<br>Maximum Length: %s characters<br><br>The description appearing beneath the title in search engine results plays a crucial role in conveying the essence of the article. It should be concise yet comprehensive, promptly informing potential readers about the content\'s focus. Additionally, it\'s essential to integrate all relevant keywords seamlessly to enhance search relevance and visibility.', 'acfseo'),
-                    $this->description_recommended_length,
-                    $this->description_maxlength
+                    $description_recommended_length,
+                    $description_maxlength
                 ),
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -200,7 +197,7 @@ class Fields extends Singleton
                     'id' => '',
                 ],
                 'default_value' => '',
-                'maxlength' => $this->description_maxlength,
+                'maxlength' => $description_maxlength,
                 'rows' => '',
                 'placeholder' => '',
                 'new_lines' => '',
