@@ -12,7 +12,7 @@ class Injector extends Singleton
     public function run()
     {
         add_action('wp_head', [$this, 'injectFields']);
-        add_filter('wp_robots', [$this, 'handleRobotsTag']);
+        add_filter('wp_robots', [$this, 'disableWpRobotsTag']);
         add_filter('get_canonical_url', [$this, 'handleCanonicalUrl'], 10, 2);
         add_filter('pre_get_document_title', [$this, 'handleWpTitle']);
     }
@@ -27,6 +27,8 @@ class Injector extends Singleton
         if (!function_exists('get_field')) {
             return;
         }
+
+        echo $this->getRobotsMetaTag();
 
         $object = get_queried_object();
 
@@ -124,31 +126,73 @@ class Injector extends Singleton
         return !empty($seo_canonical) ? $seo_canonical : $canonical_url;
     }
 
-    public function handleRobotsTag($robots)
+    public function disableWpRobotsTag($robots)
+    {
+        // Just reset default WP meta robots befause they support only index, follow and max-image-preview
+        if (function_exists('get_field')) {
+            return [];
+        }
+
+        return $robots;
+    }
+
+    public function getMetaTag($values): string
+    {
+        ob_start(); ?>
+            <meta name="robots" content="<?php echo is_array($values) ? implode(', ', $values) : $values; ?>" />
+        <?php return ob_get_clean();
+    }
+
+    public function getRobotsMetaTag()
     {
         if (get_option('blog_public') == 0) {
-            return $robots;
+            return $this->getMetaTag([
+                'noindex',
+                'nofollow'
+            ]);
         }
+
+        $robots = [
+            'max-image-preview' => 'max-image-preview:large',
+            'max-video-preview' => 'max-video-preview:0',
+            'max-snippet'       => 'max-snippet:0'
+        ];
 
         $object = get_queried_object();
 
         if (!$object instanceof WP_Post) {
             // Currenlty works only on posts. The logic for taxonomies is different.
-            return $robots;
+            return $this->getMetaTag(array_values($robots));
         }
 
-        $seo_robot_index = get_field('seo_meta_robots_index_setting', $object->ID);
+        $seo_robot_index  = get_field('seo_meta_robots_index_setting', $object->ID);
         $seo_robot_follow = get_field('seo_meta_robots_follow_setting', $object->ID);
 
-        if (!empty($seo_robot_index) && !empty($seo_robot_follow)) {
-            $robots['noindex'] = $seo_robot_index === 'noindex' ? true : false;
-            $robots['nofollow'] = $seo_robot_follow === 'nofollow' ? true : false;
-
-            if ($robots['noindex'] || $robots['nofollow']) {
-                $robots['max-image-preview'] = false;
-            }
+        if (empty($seo_robot_index) && empty($seo_robot_follow)) {
+            return $this->getMetaTag(array_values($robots));
         }
 
-        return $robots;
+        if ($seo_robot_index === 'noindex' || $seo_robot_follow === 'nofollow') {
+            return $this->getMetaTag([
+                $seo_robot_index,
+                $seo_robot_follow
+            ]);
+        } else {
+            $seo_robot_max_image_preview    = get_field('seo_meta_robots_max_image_preview_setting', $object->ID);
+            $seo_robot_max_video_preview    = get_field('seo_meta_robots_max_video_preview_setting', $object->ID);
+            $seo_robot_max_snippet          = get_field('seo_meta_robots_max_snippet_setting', $object->ID);
+
+            return $this->getMetaTag([
+                !empty($seo_robot_max_image_preview)
+                    ? "max-image-preview:{$seo_robot_max_image_preview}"
+                    : $robots['max-image-preview'],
+                !empty($seo_robot_max_video_preview)
+                    ? "max-video-preview:{$seo_robot_max_video_preview}"
+                    : $robots['max-video-preview'],
+                !empty($seo_robot_max_snippet)
+                    ? "max-snippet:{$seo_robot_max_snippet}"
+                    : $robots['max-snippet'],
+            ]);
+        }
     }
 }

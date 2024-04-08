@@ -220,6 +220,27 @@ class Fields extends Singleton
                 'endpoint' => 0,
             ],
             [
+                'key' => 'field_6613dc5ffc874',
+                'label' => '',
+                'name' => '',
+                'aria-label' => '',
+                'type' => 'message',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => [
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ],
+                'message' => sprintf(
+                    __('Additional documentation about valid indexing and serving rules can be found <a href="%s" target="_blank">here</a>.', 'acfseo'),
+                    'https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#directives'
+                ),
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
+            ],
+            [
                 'key' => 'field_654ce4ded980f',
                 'label' => __('META Robot indexing settings', 'acfseo'),
                 'name' => 'seo_meta_robots_index_setting',
@@ -229,7 +250,7 @@ class Fields extends Singleton
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => [
-                    'width' => '',
+                    'width' => '50',
                     'class' => '',
                     'id' => '',
                 ],
@@ -255,7 +276,7 @@ class Fields extends Singleton
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => [
-                    'width' => '',
+                    'width' => '50',
                     'class' => '',
                     'id' => '',
                 ],
@@ -270,6 +291,116 @@ class Fields extends Singleton
                 'ui' => 0,
                 'ajax' => 0,
                 'placeholder' => '',
+            ],
+            [
+                'key' => 'field_654ce511d9811',
+                'label' => __('META Robot <code>max-image-preview</code> Settings', 'acfseo'),
+                'name' => 'seo_meta_robots_max_image_preview_setting',
+                'aria-label' => '',
+                'type' => 'select',
+                'instructions' => __('Set the maximum size of an image preview for this page in a search results.', 'acfseo'),
+                'required' => 0,
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'field_654ce4ded980f',
+                            'operator' => '==',
+                            'value' => 'index',
+                        ],
+                        [
+                            'field' => 'field_654ce511d9810',
+                            'operator' => '==',
+                            'value' => 'follow',
+                        ],
+                    ],
+                ],
+                'wrapper' => [
+                    'width' => '33.33',
+                    'class' => '',
+                    'id' => '',
+                ],
+                'choices' => [
+                    'none' => __('None', 'acfseo'),
+                    'standard' => __('Standard', 'acfseo'),
+                    'large' => __('Large', 'acfseo')
+                ],
+                'default_value' => 'large',
+                'return_format' => 'value',
+                'multiple' => 0,
+                'allow_null' => 0,
+                'ui' => 0,
+                'ajax' => 0,
+                'placeholder' => '',
+            ],
+            [
+                'key' => 'field_6613d9d944887',
+                'label' => __('META Robot <code>max-video-preview</code> Settings', 'acfseo'),
+                'name' => 'seo_meta_robots_max_video_preview_setting',
+                'aria-label' => '',
+                'type' => 'number',
+                'instructions' => __('Set the number of seconds used as a video snippet for videos on this page in search results.', 'acfseo'),
+                'required' => 0,
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'field_654ce4ded980f',
+                            'operator' => '==',
+                            'value' => 'index',
+                        ],
+                        [
+                            'field' => 'field_654ce511d9810',
+                            'operator' => '==',
+                            'value' => 'follow',
+                        ],
+                    ],
+                ],
+                'wrapper' => [
+                    'width' => '33.33',
+                    'class' => '',
+                    'id' => '',
+                ],
+                'default_value' => 0,
+                'min' => -1,
+                'max' => '',
+                'placeholder' => '',
+                'step' => '',
+                'prepend' => '',
+                'append' => '',
+            ],
+            [
+                'key' => 'field_6613d9d944888',
+                'label' => __('META Robot <code>max-snippet</code> Settings', 'acfseo'),
+                'name' => 'seo_meta_robots_max_snippet_setting',
+                'aria-label' => '',
+                'type' => 'number',
+                'instructions' => __('Set the number of characters used as a textual snippet for this search result.', 'acfseo'),
+                'required' => 0,
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'field_654ce4ded980f',
+                            'operator' => '==',
+                            'value' => 'index',
+                        ],
+                        [
+                            'field' => 'field_654ce511d9810',
+                            'operator' => '==',
+                            'value' => 'follow',
+                        ],
+                    ],
+                ],
+                'wrapper' => [
+                    'width' => '33.33',
+                    'class' => '',
+                    'id' => '',
+                ],
+                'default_value' => 0,
+                'min' => -1,
+                'max' => '',
+                'placeholder' => '',
+                'step' => '',
+                'prepend' => '',
+                'append' => '',
             ],
             [
                 'key' => 'field_654ce542d9811',
