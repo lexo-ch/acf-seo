@@ -93,7 +93,7 @@
     "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
     "intelephense.trace.server": "messages",
     "intelephense.format.braces": "psr12",
-    "intelephense.environment.phpVersion": "8.1.3",
+    "intelephense.environment.phpVersion": "8.3.0",
     "intelephense.files.exclude": [
         "**/.git/**",
         "**/.svn/**",
