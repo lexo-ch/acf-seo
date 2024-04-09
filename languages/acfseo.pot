@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LEXO ACF SEO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-08 14:14+0000\n"
+"POT-Creation-Date: 2024-04-09 08:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,69 +16,79 @@ msgstr ""
 "X-Loco-Version: 2.6.6; wp-6.4.1\n"
 "X-Domain: acfseo"
 
-#: ../../../../../../../Documents/GitHub/acf-seo/acf-seo.php:125
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/admin-settings.php:15
+#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:328
+#, php-format
+msgid "%s Settings"
+msgstr ""
+
+#: ../../../../../../../Documents/GitHub/acf-seo/acf-seo.php:128
 msgid ""
 "ACF PRO is required in order to use LEXO ACF SEO plugin. Please activate ACF "
 "PRO plugin."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:503
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:490
 msgid "Activate"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:490
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:477
 msgid "Activate X.com settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:237
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:224
 #, php-format
 msgid ""
 "Additional documentation about valid indexing and serving rules can be found "
 "<a href=\"%s\" target=\"_blank\">here</a>."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:456
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:443
 msgid "Article"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:455
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:442
 msgid "Blog"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:551
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:538
 msgid ""
 "Contains the @username of the website or company. This field is <b>"
 "optional</b>"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:579
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:566
 msgid "Contains the author's @username. This field is <b>optional</b>"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:142
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:129
 msgid "Display in search engines"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:285
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:272
 msgid "Don't follow META robots"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:407
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:394
 msgid "Duplicates Settings (Canonical URL)"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:445
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:432
 msgid ""
 "Enter your website type. If you don't know what type it is, it will default "
 "to <b>Website</b>."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:284
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:271
 msgid "Follow META robots"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:258
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:245
 msgid "Global default setup (index)"
+msgstr ""
+
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/admin-settings.php:37
+msgid "Global Theme color"
 msgstr ""
 
 #. URI of the plugin
@@ -89,7 +99,7 @@ msgstr ""
 msgid "https://www.lexo.ch"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:411
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:398
 msgid ""
 "If the content of the page is a duplicate of another page, the URL of the "
 "original page should be provided here. You can also use URLs from external "
@@ -97,19 +107,19 @@ msgid ""
 "https://www.some-other-website.com/news/news-post-xyz"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:275
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:262
 msgid ""
 "If the setting <b>\"META robots do not follow\"</b> is set, the Google "
 "robots will not follow the links on the page."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:494
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:481
 msgid ""
 "If you activate this setting, you will have access to the X.com Card "
 "settings."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:325
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:312
 msgid "Large"
 msgstr ""
 
@@ -121,64 +131,68 @@ msgstr ""
 msgid "LEXO GmbH"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:297
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:284
 msgid "META Robot <code>max-image-preview</code> Settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:372
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:359
 msgid "META Robot <code>max-snippet</code> Settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:337
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:324
 msgid "META Robot <code>max-video-preview</code> Settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:271
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:258
 msgid "META Robot Follow Settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:245
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:232
 msgid "META Robot indexing settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:636
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:623
 msgid "Mobile properties"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:323
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:310
 msgid "None"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:72
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:95
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:59
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:82
 msgid "Page heading 1"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:119
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:106
 msgid "Page heading 2"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:51
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:640
+msgid "Page Theme color"
+msgstr ""
+
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:38
 msgid "Page title properties"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:110
+#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:151
 #, php-format
 msgid "Plugin %s is up to date."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:123
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:110
 msgid "Put the page heading 2 here"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:76
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:99
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:63
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:86
 msgid ""
 "Put the page title here. If this field is left blank, the respective page "
 "will have no title!"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:164
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:151
 #, php-format
 msgid ""
 "Recommended Length: %s characters or less<br>Maximum Length: %s "
@@ -190,7 +204,7 @@ msgid ""
 "enhance your post's visibility and attractiveness in search results."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:188
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:175
 #, php-format
 msgid ""
 "Recommended Length: %s characters or less<br>Maximum Length: %s "
@@ -201,19 +215,19 @@ msgid ""
 "relevant keywords seamlessly to enhance search relevance and visibility."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:183
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:170
 msgid "Search Engine Description"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:207
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:194
 msgid "Search engine indexing"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:159
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:146
 msgid "Search Engine Title"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:101
+#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:142
 msgid "Security check failed."
 msgstr ""
 
@@ -221,60 +235,79 @@ msgstr ""
 msgid "SEO addon based on ACF."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:465
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:452
 msgid "SEO Image"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:673
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:663
 msgid "SEO Settings"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:657
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/admin-settings.php:41
 msgid ""
-"Set a color here, which is set as the background for the respective tab on "
-"Android on Chrome. This setting only affects <b>Chrome on Android</b>"
+"Set a global Theme color here, which is set as the background for the "
+"respective tab on Android on Chrome. This setting only affects <b>Chrome on "
+"Android.</b>"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:301
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:645
+#, php-format
+msgid ""
+"Set a page Theme color here, which is set as the background for the "
+"respective tab on Android on Chrome. This will override a global Theme color "
+"set <a href=\"%s\">here</a>. This setting only affects <b>Chrome on Android."
+"</b>"
+msgstr ""
+
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:288
 msgid ""
 "Set the maximum size of an image preview for this page in a search results."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:376
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:363
 msgid ""
 "Set the number of characters used as a textual snippet for this search "
 "result."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:341
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:328
 msgid ""
 "Set the number of seconds used as a video snippet for videos on this page in "
 "search results."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:520
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:507
 msgid ""
 "Set the type for your X.com card. This is crucial if you want to share the "
 "website via X.com. By default, <b>Summary</b> is selected."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:424
+#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:116
+msgid "Settings"
+msgstr ""
+
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:411
 msgid "Social Media"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:324
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:311
 msgid "Standard"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:536
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:523
 msgid "Summary"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:537
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:524
 msgid "Summary with large image"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:469
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/admin-settings.php:21
+msgctxt "Tab in Admin Settings"
+msgid "Mobile properties"
+msgstr ""
+
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:456
 msgid ""
 "The selected image must have a resolution of at least <strong>1200 x "
 "630px</strong>.<br>The image will be used when the post appears on Facebook, "
@@ -283,46 +316,42 @@ msgid ""
 "appearance of the article on social media."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:653
-msgid "Theme color"
-msgstr ""
-
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:441
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:428
 msgid "Type"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:76
+#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/PluginService.php:113
 msgid "Update check"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:607
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:594
 msgid ""
 "Upload the video that you want to display on the X.com card here. The video "
 "replaces the image (if set)."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:538
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:525
 msgid "Videos or images"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:249
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:236
 msgid ""
 "With the <b>\"No indexing\"</b> setting you can prevent Google robots from "
 "indexing your website."
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:575
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:562
 msgid "X.com @ Author"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:547
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:534
 msgid "X.com @ Name"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:516
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:503
 msgid "X.com Card Type"
 msgstr ""
 
-#: ../../../../../../../Documents/GitHub/acf-seo/src/Core/Plugin/Fields.php:603
+#: ../../../../../../../Documents/GitHub/acf-seo/assets/acf/fields.php:590
 msgid "X.com Video"
 msgstr ""

@@ -2,8 +2,6 @@
 
 namespace LEXO\AcfSeo\Core\Traits;
 
-use WP_Post;
-
 trait Helpers
 {
     public static function getClassName($classname)
@@ -26,5 +24,14 @@ trait Helpers
     public static function printr(mixed $data): string
     {
         return "<pre>" . \print_r($data, true) . "</pre>";
+    }
+
+    public static function getFilesFromdirectory($directory)
+    {
+        $assets = array_values(array_diff(scandir($directory), array('..', '.')));
+
+        return array_filter($assets, function ($item) use ($directory) {
+            return !is_dir(trailingslashit($directory) . $item);
+        });
     }
 }

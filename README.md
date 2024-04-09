@@ -69,6 +69,16 @@ Default `$show_h2` value is `true`.
 `apply_filters('acfseo/description/maxlength', $maxlength);`
 - $maxlength (int) Increases the `maxlength` for Description field.
 
+#### - `acfseo/options-page/capability`
+*Parameters*
+`apply_filters('acfseo/options-page/capability', $args);`
+- $args (string) Change minimum user capability for options page.
+
+#### - `acfseo/options-page/parent-slug`
+*Parameters*
+`apply_filters('acfseo/options-page/parent-slug', $args);`
+- $args (string) Change parent slug for options page.
+
 ---
 ## Actions
 #### - `acfseo/init`

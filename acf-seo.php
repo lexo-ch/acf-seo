@@ -99,6 +99,9 @@ if (!file_exists($composer = PATH . '/vendor/autoload.php')) {
         Please run a following command:<pre>composer install</pre>', 'acfseo');
 }
 
+!defined('LEXO\AcfSeo\SETTINGS_PAGE_SLUG')
+    && define('LEXO\AcfSeo\SETTINGS_PAGE_SLUG', DOMAIN . '-design-options');
+
 require $composer;
 
 register_activation_hook(FILE, function () {

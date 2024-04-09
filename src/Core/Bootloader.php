@@ -38,12 +38,12 @@ class Bootloader extends Singleton
         $plugin_settings = PluginService::getInstance();
         $plugin_settings->setNamespace(DOMAIN);
         $plugin_settings->registerNamespace();
-        $plugin_settings->addUpdateCheckLink();
+        $plugin_settings->addPluginLinks();
+        $plugin_settings->addOptionPage();
         $plugin_settings->noUpdatesNotice();
         $plugin_settings->updateSuccessNotice();
         $plugin_settings->setToolbars();
-
-        Fields::getInstance()->run();
+        $plugin_settings->importFields();
 
         Injector::getInstance()->run();
     }

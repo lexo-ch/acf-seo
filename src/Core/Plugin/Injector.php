@@ -48,6 +48,11 @@ class Injector extends Singleton
         $seo_publisher = 'LEXO - IT & Accounting Services - Hardware, Software, IT-Security, Server, Netzwerke, Online-Shops, Buchhaltungsprogramme (https://www.lexo.ch)';
         $seo_image_field = get_field('seo_image', $object->ID);
         $seo_theme_color = get_field('seo_theme_color', $object->ID);
+
+        if (empty($seo_theme_color)) {
+            $seo_theme_color = get_field('seo_theme_color_global', 'option');
+        }
+
         $seo_theme_color = !empty($seo_theme_color) ? $seo_theme_color : '#ffffff';
 
         ob_start(); ?>
