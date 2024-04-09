@@ -1,3 +1,18 @@
+# [1.2.0](https://github.com/lexo-ch/acf-seo/compare/v1.1.2...v1.2.0) (2024-04-09)
+
+
+### Bug Fixes
+
+* **deps:** Update dependencies ([4eaca9a](https://github.com/lexo-ch/acf-seo/commit/4eaca9afd39603afd2495d34cc386c5840e74271))
+* **docs:** Tested up to WP version ([9c1d263](https://github.com/lexo-ch/acf-seo/commit/9c1d2631c944f80d558079dc42d98fa970f1c4f2))
+* **release:** Update Github cache version ([766235d](https://github.com/lexo-ch/acf-seo/commit/766235d146a3f59f5252a5ea6305acf81d97fccf))
+
+
+### Features
+
+* **core:** Add new robots settings ([78b48bb](https://github.com/lexo-ch/acf-seo/commit/78b48bb265398c022175c3181d6fb11ddbf6217d))
+* **core:** Add options page and global mobile properties ([9cd45af](https://github.com/lexo-ch/acf-seo/commit/9cd45afe0b2ff792ec2b9a1b752cd6ab9084eb5a))
+
 ## [1.1.2](https://github.com/lexo-ch/acf-seo/compare/v1.1.1...v1.1.2) (2023-12-12)
 
 
