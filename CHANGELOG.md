@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/lexo-ch/acf-seo/compare/v1.2.0...v1.2.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* **core:** Check for update every hour ([d829446](https://github.com/lexo-ch/acf-seo/commit/d8294465f942aa34fecbf900d56833d0ffed5be3))
+
 # [1.2.0](https://github.com/lexo-ch/acf-seo/compare/v1.1.2...v1.2.0) (2024-04-09)
 
 
