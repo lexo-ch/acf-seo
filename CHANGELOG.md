@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/lexo-ch/acf-seo/compare/v1.2.1...v1.2.2) (2024-06-18)
+
+
+### Bug Fixes
+
+* **core:** Require ACF PRO ([b0c0ce5](https://github.com/lexo-ch/acf-seo/commit/b0c0ce5cafde5e48ab60206cff31f614c87cf147))
+* **core:** Set max-snippet default to -1 ([c2a82b3](https://github.com/lexo-ch/acf-seo/commit/c2a82b3c8f4c41df9d460f9006c2fee19517bc38))
+* **deps:** Update dependencies ([97138f1](https://github.com/lexo-ch/acf-seo/commit/97138f1cbc50cd5dcf6f05f19ffc1f75cd46041c))
+
 ## [1.2.1](https://github.com/lexo-ch/acf-seo/compare/v1.2.0...v1.2.1) (2024-04-10)
 
 
