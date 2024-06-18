@@ -381,7 +381,7 @@ $fields = array_merge($fields, [
             'class' => '',
             'id' => '',
         ],
-        'default_value' => 0,
+        'default_value' => -1,
         'min' => -1,
         'max' => '',
         'placeholder' => '',

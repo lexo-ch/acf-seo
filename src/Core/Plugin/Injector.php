@@ -160,7 +160,7 @@ class Injector extends Singleton
         $robots = [
             'max-image-preview' => 'max-image-preview:large',
             'max-video-preview' => 'max-video-preview:0',
-            'max-snippet'       => 'max-snippet:0'
+            'max-snippet'       => 'max-snippet:-1'
         ];
 
         $object = get_queried_object();
