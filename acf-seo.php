@@ -14,6 +14,7 @@
  * Text Domain:       acfseo
  * Domain Path:       /languages
  * Update URI:        acf-seo
+ * Requires Plugins:  advanced-custom-fields-pro
  */
 
 namespace LEXO\AcfSeo;
