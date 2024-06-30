@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/lexo-ch/acf-seo/compare/v1.2.2...v1.2.3) (2024-06-30)
+
+
+### Bug Fixes
+
+* **core:** Remove 'noindex' posts from sitemap ([3817f9a](https://github.com/lexo-ch/acf-seo/commit/3817f9a78fa83512cb661a6fe2ce1c5f7d84988b))
+* **deps:** Update dependencies ([eadb4b8](https://github.com/lexo-ch/acf-seo/commit/eadb4b8c3c3e43d646dad473c916ce66a34cd209))
+
 ## [1.2.2](https://github.com/lexo-ch/acf-seo/compare/v1.2.1...v1.2.2) (2024-06-18)
 
 
