@@ -116,7 +116,7 @@ class PluginService extends Singleton
         }
 
         add_filter('wp_sitemaps_posts_query_args', function ($args, $post_type) use ($post_ids) {
-            if (!in_array($post_type, Helpers::getPostTypesFromLocationArray())) {
+            if (!in_array($post_type, self::getPostTypesFromLocationArray())) {
                 return $args;
             }
 
