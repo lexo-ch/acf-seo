@@ -74,6 +74,59 @@ class PluginService extends Singleton
         return $capability;
     }
 
+    public static function getLocationArray()
+    {
+        $location = [
+            [
+                [
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ]
+            ]
+        ];
+
+        return apply_filters(DOMAIN . '/location', $location);
+    }
+
+    public function getPostIdsForExcluding()
+    {
+        $post_ids = get_posts([
+            'post_type'      => Helpers::getPostTypesFromLocationArray(),
+            'post_status'    => 'publish',
+            'meta_key'       => 'seo_meta_robots_index_setting',
+            'meta_value'     => 'noindex',
+            'fields'         => 'ids',
+            'posts_per_page' => -1,
+        ]);
+
+        if (!$post_ids) {
+            return [];
+        }
+
+        return $post_ids;
+    }
+
+    public function excludePostsFromSitemap()
+    {
+        $post_ids = $this->getPostIdsForExcluding();
+
+        if (!$post_ids) {
+            return false;
+        }
+
+        add_filter('wp_sitemaps_posts_query_args', function ($args, $post_type) use ($post_ids) {
+            if (!in_array($post_type, Helpers::getPostTypesFromLocationArray())) {
+                return $args;
+            }
+
+            $args['post__not_in'] = isset($args['post__not_in']) ? $args['post__not_in'] : [];
+            $args['post__not_in'] = array_merge($args['post__not_in'], $post_ids);
+
+            return $args;
+        }, 10, 2);
+    }
+
     public static function getSettingsPageParentSlug()
     {
         $slug = self::SETTINGS_PARENT_SLUG;

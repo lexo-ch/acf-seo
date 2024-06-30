@@ -2,6 +2,8 @@
 
 namespace LEXO\AcfSeo\Core\Traits;
 
+use LEXO\AcfSeo\Core\Plugin\PluginService;
+
 trait Helpers
 {
     public static function getClassName($classname)
@@ -33,5 +35,12 @@ trait Helpers
         return array_filter($assets, function ($item) use ($directory) {
             return !is_dir(trailingslashit($directory) . $item);
         });
+    }
+
+    public static function getPostTypesFromLocationArray()
+    {
+        return array_map(function ($item) {
+            return $item[0]['value'];
+        }, PluginService::getLocationArray());
     }
 }

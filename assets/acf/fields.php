@@ -10,15 +10,6 @@ use const LEXO\AcfSeo\{
     DOMAIN
 };
 
-$location = [
-    [
-        [
-            'param' => 'post_type',
-            'operator' => '==',
-            'value' => 'page',
-        ]
-    ]
-];
 $heading_1_type                 = 'text';
 $show_heading_2                 = true;
 $seo_title_recommended_length   = 60;
@@ -26,7 +17,7 @@ $description_recommended_length = 160;
 $seo_title_maxlength            = 120;
 $description_maxlength          = 250;
 
-$location               = apply_filters(DOMAIN . '/location', $location);
+$location               = PluginService::getLocationArray();
 $heading_1_type         = apply_filters(DOMAIN . '/heading-1-type', $heading_1_type);
 $show_heading_2         = apply_filters(DOMAIN . '/show-heading-2', $show_heading_2);
 $seo_title_maxlength    = apply_filters(DOMAIN . '/seo-title/maxlength', $seo_title_maxlength);
