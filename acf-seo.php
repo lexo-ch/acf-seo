@@ -4,7 +4,7 @@
  * Plugin Name:       LEXO ACF SEO
  * Plugin URI:        https://github.com/lexo-ch/acf-seo/
  * Description:       SEO addon based on ACF.
- * Version:           1.2.4
+ * Version:           1.2.5
  * Requires at least: 6.4
  * Requires PHP:      7.4.1
  * Author:            LEXO GmbH

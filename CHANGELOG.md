@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/lexo-ch/acf-seo/compare/v1.2.4...v1.2.5) (2024-06-30)
+
+
+### Bug Fixes
+
+* **core:** Fix deprecated call on trait ([a789dc5](https://github.com/lexo-ch/acf-seo/commit/a789dc5edcdbf9606dd22d13c3522042da19273c))
+
 ## [1.2.4](https://github.com/lexo-ch/acf-seo/compare/v1.2.3...v1.2.4) (2024-06-30)
 
 
