@@ -92,7 +92,7 @@ class PluginService extends Singleton
     public function getPostIdsForExcluding()
     {
         $post_ids = get_posts([
-            'post_type'      => Helpers::getPostTypesFromLocationArray(),
+            'post_type'      => self::getPostTypesFromLocationArray(),
             'post_status'    => 'publish',
             'meta_key'       => 'seo_meta_robots_index_setting',
             'meta_value'     => 'noindex',
