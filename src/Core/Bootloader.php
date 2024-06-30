@@ -44,6 +44,7 @@ class Bootloader extends Singleton
         $plugin_settings->updateSuccessNotice();
         $plugin_settings->setToolbars();
         $plugin_settings->importFields();
+        $plugin_settings->excludePostsFromSitemap();
 
         Injector::getInstance()->run();
     }
